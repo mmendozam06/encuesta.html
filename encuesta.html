@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ASOMADRE MUJER SIGLO XXI</title>
+    <style>
+        body { 
+            background-image: url('image_978b9e.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            padding: 20px; 
+            margin: 0;
+        }
+
+        .contenedor { 
+            max-width: 800px; 
+            margin: auto; 
+            background: rgba(255, 255, 255, 0.96); 
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+            overflow: hidden;
+            border: 4px solid #db2777; 
+        }
+
+        .header {
+            background: #db2777; 
+            padding: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .formulario-body { padding: 30px; }
+
+        .sede-selector {
+            border: 2px solid #db2777; 
+            background-color: #fff1f2;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        fieldset { 
+            border: 1px solid #fbcfe8; 
+            border-radius: 12px; 
+            margin-bottom: 20px; 
+            padding: 15px 20px; 
+            background-color: white;
+        }
+
+        legend { 
+            font-weight: bold; 
+            color: #be185d; 
+            background: #fce7f3; 
+            padding: 5px 15px; 
+            border-radius: 8px; 
+        }
+
+        .opcion { display: flex; align-items: center; margin: 10px 0; cursor: pointer; padding: 5px; border-radius: 5px; }
+        .opcion:hover { background-color: #fdf2f8; }
+        input[type="radio"] { margin-right: 12px; accent-color: #db2777; width: 18px; height: 18px; cursor: pointer; }
+
+        button { 
+            background-color: #db2777; 
+            color: white; 
+            border: none; 
+            padding: 20px; 
+            width: 100%; 
+            border-radius: 15px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            box-shadow: 0 4px 0 #9d174d;
+        }
+
+        button:active { transform: translateY(2px); box-shadow: 0 2px 0 #9d174d; }
+
+        #resultado { display: none; padding: 50px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="contenedor">
+    <div class="header">
+        <h1>ASOMADRE MUJER SIGLO XXI</h1>
+        <p>Sentidos y Comprensiones sobre la Primera Infancia y Familia</p>
+    </div>
+
+    <div class="formulario-body">
+        <form id="encuesta">
+            <div class="sede-selector">
+                <label><b>📍 Seleccione su Sede:</b></label>
+                <select id="sede" name="sede" required style="width:100%; padding:12px; margin-top:10px; border-radius:8px; border:1px solid #db2777;">
+                    <option value="" disabled selected>-- Elija su Hogar Infantil --</option>
+                    <option value="Santa Cecilia">Santa Cecilia</option>
+                    <option value="Josefina Quintero">Josefina Quintero</option>
+                    <option value="Santa María">Santa María</option>
+                    <option value="La Bucaramanga">La Bucaramanga</option>
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>1. ¿Qué es la gestación? [cite: 4]</legend>
+                <label class="opcion"><input type="radio" name="p1" value="Etapa desarrollo vientre" required> Etapa en la que el bebé se desarrolla en el vientre materno [cite: 5]</label>
+                <label class="opcion"><input type="radio" name="p1" value="Nacimiento"> El momento del nacimiento [cite: 6]</label>
+                <label class="opcion"><input type="radio" name="p1" value="Crianza"> La crianza del niño [cite: 7]</label>
+                <label class="opcion"><input type="radio" name="p1" value="No sabe"> No sabe / No responde [cite: 8]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>2. ¿Qué es la primera infancia? [cite: 9]</legend>
+                <label class="opcion"><input type="radio" name="p2" value="0-5 años" required> Etapa desde el nacimiento hasta los 5 años [cite: 10]</label>
+                <label class="opcion"><input type="radio" name="p2" value="6-12 años"> Desde los 6 hasta los 12 años [cite: 11]</label>
+                <label class="opcion"><input type="radio" name="p2" value="1 año"> Solo el primer año de vida [cite: 12]</label>
+                <label class="opcion"><input type="radio" name="p2" value="No sabe"> No sabe [cite: 13]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>3. ¿Qué es familia? [cite: 14]</legend>
+                <label class="opcion"><input type="radio" name="p3" value="Apoyo mutuo" required> Personas que viven juntas y se apoyan [cite: 15]</label>
+                <label class="opcion"><input type="radio" name="p3" value="Tradicional"> Solo mamá, papá e hijos [cite: 16]</label>
+                <label class="opcion"><input type="radio" name="p3" value="Amor y cuidado"> Personas unidas por amor y cuidado [cite: 17]</label>
+                <label class="opcion"><input type="radio" name="p3" value="No sabe"> No sabe [cite: 18]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>4. ¿Cómo fue su crianza? [cite: 19]</legend>
+                <label class="opcion"><input type="radio" name="p4" value="Normas estrictas" required> Con normas estrictas [cite: 20]</label>
+                <label class="opcion"><input type="radio" name="p4" value="Diálogo afecto"> Con diálogo y afecto [cite: 21]</label>
+                <label class="opcion"><input type="radio" name="p4" value="Castigos físicos"> Con castigos físicos [cite: 22]</label>
+                <label class="opcion"><input type="radio" name="p4" value="Poco acompañamiento"> Con poco acompañamiento [cite: 23]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>5. Actualmente usted corrige a su hijo(a) mediante: [cite: 25]</legend>
+                <label class="opcion"><input type="radio" name="p5" value="Diálogo" required> Diálogo [cite: 26]</label>
+                <label class="opcion"><input type="radio" name="p5" value="Retiro privilegios"> Retiro de privilegios [cite: 27]</label>
+                <label class="opcion"><input type="radio" name="p5" value="Castigo físico"> Castigo físico [cite: 28]</label>
+                <label class="opcion"><input type="radio" name="p5" value="Gritos"> Gritos [cite: 29]</label>
+                <label class="opcion"><input type="radio" name="p5" value="Acuerdos y normas"> Acuerdos y normas [cite: 30]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>6. ¿Qué considera más importante en la primera infancia? [cite: 31]</legend>
+                <label class="opcion"><input type="radio" name="p6" value="Alimentación" required> Alimentación [cite: 32]</label>
+                <label class="opcion"><input type="radio" name="p6" value="Educación"> Educación [cite: 33]</label>
+                <label class="opcion"><input type="radio" name="p6" value="Afecto"> Afecto [cite: 34]</label>
+                <label class="opcion"><input type="radio" name="p6" value="Juego"> Juego [cite: 35]</label>
+                <label class="opcion"><input type="radio" name="p6" value="Protección"> Protección [cite: 36]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>7. ¿Conoce los derechos de los niños y niñas? [cite: 37]</legend>
+                <label class="opcion"><input type="radio" name="p7" value="Sí" required> Sí [cite: 38]</label>
+                <label class="opcion"><input type="radio" name="p7" value="No"> No [cite: 39]</label>
+                <label class="opcion"><input type="radio" name="p7" value="Poco conocimiento"> He escuchado pero no los conozco claramente [cite: 40]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>8. ¿Qué situaciones cree que vulneran los derechos? [cite: 41]</legend>
+                <label class="opcion"><input type="radio" name="p8" value="Maltrato físico" required> Maltrato físico [cite: 42]</label>
+                <label class="opcion"><input type="radio" name="p8" value="Violencia verbal"> Violencia verbal [cite: 43]</label>
+                <label class="opcion"><input type="radio" name="p8" value="Negligencia"> Negligencia [cite: 44]</label>
+                <label class="opcion"><input type="radio" name="p8" value="Trabajo infantil"> Trabajo infantil [cite: 45]</label>
+                <label class="opcion"><input type="radio" name="p8" value="No sabe"> No sabe [cite: 46]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>9. El hogar infantil cumple un papel en: [cite: 47]</legend>
+                <label class="opcion"><input type="radio" name="p9" value="Educación" required> Educación [cite: 48]</label>
+                <label class="opcion"><input type="radio" name="p9" value="Cuidado"> Cuidado [cite: 49]</label>
+                <label class="opcion"><input type="radio" name="p9" value="Protección"> Protección [cite: 50]</label>
+                <label class="opcion"><input type="radio" name="p9" value="Apoyo familia"> Apoyo a la familia [cite: 51]</label>
+                <label class="opcion"><input type="radio" name="p9" value="Todas"> Todas las anteriores [cite: 52]</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>10. ¿La familia y el hogar infantil deben trabajar juntos? [cite: 53]</legend>
+                <label class="opcion"><input type="radio" name="p10" value="Sí" required> Sí [cite: 54]</label>
+                <label class="opcion"><input type="radio" name="p10" value="No"> No [cite: 55]</label>
+                <label class="opcion"><input type="radio" name="p10" value="A veces"> A veces [cite: 56]</label>
+            </fieldset>
+
+            <button type="button" onclick="enviar()">Finalizar y Guardar Datos</button>
+        </form>
+
+        <div id="resultado">
+            <h2 style="color: #db2777;">🎉 ¡Encuesta Guardada!</h2>
+            <p>La información ha sido enviada exitosamente a la base de datos de <strong>ASOMADRE MUJER SIGLO XXI</strong>.</p>
+            <button onclick="window.location.reload()">Registrar otro padre/cuidador</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function enviar() {
+        const form = document.getElementById('encuesta');
+        const urlScript = "https://script.google.com/macros/s/AKfycbyaGcMeBFV9OM8IG__spbaR-F6HR3KoW6wKLgcS8HZesvAyLflDjPbWR4ygshGsrh985g/exec";
+
+        if (form.checkValidity()) {
+            const formData = new FormData(form);
+            const data = new URLSearchParams(formData);
+
+            try {
+                // Envío de datos a Google Sheets
+                await fetch(urlScript, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: data
+                });
+
+                form.style.display = 'none';
+                document.getElementById('resultado').style.display = 'block';
+                window.scrollTo(0,0);
+            } catch (error) {
+                alert("Hubo un error al guardar. Revise su conexión a internet.");
+            }
+        } else {
+            alert("Por favor, seleccione su sede y marque una 'X' en cada pregunta.");
+        }
+    }
+</script>
+
+</body>
+</html>
